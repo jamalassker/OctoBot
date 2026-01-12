@@ -43,10 +43,12 @@ RUN apt-get update \
     && ln -s /opt/venv/bin/OctoBot OctoBot # Make sure we use the virtualenv \
     && chmod +x docker-entrypoint.sh
 
-VOLUME /octobot/backtesting
-VOLUME /octobot/logs
-VOLUME /octobot/tentacles
-VOLUME /octobot/user
+# --- RAILWAY FIX: VOLUME commands removed ---
+# VOLUME /octobot/backtesting
+# VOLUME /octobot/logs
+# VOLUME /octobot/tentacles
+# VOLUME /octobot/user
+# --------------------------------------------
 
 EXPOSE 5001
 
